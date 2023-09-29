@@ -1,0 +1,33 @@
+import pygame
+import sys
+
+# Initialize Pygame
+pygame.init()
+
+# Constants
+WIDTH, HEIGHT = 800, 600
+BACKGROUND_COLOR = (135, 206, 250)  # Light Blue
+
+# Initialize the game window
+window = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("Eco-City Builder")
+
+# Game Loop
+while True:
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+    # Clear the screen
+    window.fill(BACKGROUND_COLOR)
+
+    # Draw game elements (buildings, roads, etc.)
+    # This is where you would render your city based on game state
+
+    # Update the display
+    pygame.display.flip()
+
+    # Limit frames per second
+    pygame.time.Clock().tick(30)
